@@ -9,7 +9,7 @@ from resources.item import Item, ItemList
 from resources.store import Store, StoreList
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', 'postgres://jvqtmuqvfijyqu:ce1216a08e8a13666b5f6f2abb06688a7ce000240af3e2af8698a0b05299fa38@ec2-54-88-130-244.compute-1.amazonaws.com:5432/dd9npm4nnisl7j')
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', 'sqlite:///data.db')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.secret_key = 'abhineet'
 api = Api(app)
